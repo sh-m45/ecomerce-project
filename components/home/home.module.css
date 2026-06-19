@@ -1,0 +1,122 @@
+.productCard {
+    position: relative;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    border-radius: 0.125rem;
+    box-shadow: none;
+    transition: box-shadow 200ms ease-in-out;
+    border: 1px solid #e5e7eb;
+    background-color: #e5e7eb;
+}
+
+.productCard:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.imageProductCard {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.heartIconCard {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    margin-right: 10px;
+    top: 15px;
+    left: 80%;
+    z-index: 10;
+    font-size: 30px;
+    padding: 3px;
+    border-radius: 50%;
+    color: rgb(100, 95, 95);
+    background-color: rgba(249, 246, 246, 0.6);
+
+}
+
+.plusIconCard {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    bottom: 15px;
+    left: 80%;
+    z-index: 10;
+    font-size: 30px;
+    padding: 3px;
+    border-radius: 5px;
+    color: rgb(100, 95, 95);
+    background-color: rgb(246, 245, 243);
+}
+
+
+.box,
+.box2 {
+    position: absolute;
+    top:0;
+    left: 1%;
+    display: inline-flex;
+    align-items: center;
+    /* gap: 0.35rem; */
+    padding: 0.45rem 0.20rem;
+    border-radius: 0.75rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #5c626f;
+    transition: transform 100ms ease, opacity 100ms ease;
+}
+
+.box {
+    animation: slide-toggle 7s ease-in-out infinite;
+    
+}
+
+.box2 {
+    animation: slide-toggle-alt 7s ease-in-out infinite;
+
+}
+
+.animationCard{
+    position: relative;
+}
+
+@keyframes slide-toggle {
+    0%, 10% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    15%, 50% {
+        transform: translateY(-10px);
+        opacity: 1;
+    }
+    55%, 100% {
+        transform: translateY(-15px);
+        opacity: 0;
+    }
+}
+
+@keyframes slide-toggle-alt {
+    0%, 10% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    15%, 50% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    60%, 80%{
+        transform: translateY(-10px);
+        opacity: 1;
+    }
+    85%, 100% {
+        transform: translateY(-15px);
+        opacity: 0;
+    }
+}
+

@@ -1,5 +1,24 @@
+"use client";
+
+import Carousel from "@/components/modals/Carousel";
+import { Fragment } from "react/jsx-runtime";
+import { useProducts } from "./hooks/useProducts";
+import MainCategories from "@/components/home/categories/mainCategories";
+import BestSeller from "@/components/home/bestSeller";
+import Electronics from "@/components/home/electronics";
+import Fashion from "@/components/home/fashion";
+import { Beauty } from "@/components/home/beauty";
+
 export default function Home() {
   return (
-    <h1>page this home </h1>
+    <Fragment>
+      <Carousel />
+      <MainCategories />
+      <BestSeller />
+      <Electronics />
+      <Fashion />
+      <Beauty />
+    </Fragment>
+
   );
 }

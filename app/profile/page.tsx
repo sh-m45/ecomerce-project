@@ -27,7 +27,7 @@ const othersMenu = [
 
 export default function Profile() {
     return (
-        <div className="min-h-screen bg-slate-50 px-6 py-10 text-slate-900">
+        <div className="min-h-screen bg-slate-50 px-6 py-10 text-slate-900 mt-10">
             <div className="mx-auto max-w-6xl">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                     <aside className="lg:col-span-1">
