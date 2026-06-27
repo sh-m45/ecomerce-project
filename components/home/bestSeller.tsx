@@ -13,7 +13,7 @@ export default function BestSeller() {
     const scroll = (dir: "left" | "right") => {
         const el = scrollRef.current;
         if (!el) return;
-        el.scrollBy({ left: dir === "right" ? 320 : -320, behavior: "smooth" });
+        el.scrollBy({ left: dir === "right" ? 500 : -500, behavior: "smooth" });
     };
 
     const onScroll = () => {
@@ -25,7 +25,7 @@ export default function BestSeller() {
 
     return (
         <div className="relative w-full py-4 px-2 mt-5 ">
-            <h2 className="text-2xl font-bold text-gray-800 ml-7 pl-6 mb-3 font-sans antialiased ">Recommended for you</h2>
+            <h2 className="text-2xl font-bold text-gray-800 ml-2 pl-3 mb-3 font-sans antialiased ">Recommended for you</h2>
             {/* Left arrow */}
             {showLeft && (
                 <button
@@ -44,13 +44,13 @@ export default function BestSeller() {
             <div
                 ref={scrollRef}
                 onScroll={onScroll}
-                className="flex gap-4 overflow-x-auto scroll-smooth px-6 scrollbar-none mx-5"
+                className="flex gap-4 overflow-x-auto scroll-smooth px-1 scrollbar-none"
                 style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
             >
                 {data?.map((item: any, index: number) => (
                     <button
                         key={index}
-                        className="flex flex-col gap-2 flex-shrink-0 group cursor-pointer rounded-lg pb-5 w-55 border border-gray-200 hover:shadow-md transition-shadow duration-200"
+                        className="flex flex-col gap-2 flex-shrink-0 group cursor-pointer rounded-lg pb-5 w-[15.68%] border border-gray-200 hover:shadow-md transition-shadow duration-200"
                     >
                         <div className="">
                             <div className={styles.productCard}>

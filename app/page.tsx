@@ -8,6 +8,9 @@ import BestSeller from "@/components/home/bestSeller";
 import Electronics from "@/components/home/electronics";
 import Fashion from "@/components/home/fashion";
 import { Beauty } from "@/components/home/beauty";
+import SmartPhones from "@/components/home/smartPhones";
+import Stores from "@/components/home/stores";
+import { Footer } from "@/components/layout/Footer";
 
 export default function Home() {
   return (
@@ -18,6 +21,9 @@ export default function Home() {
       <Electronics />
       <Fashion />
       <Beauty />
+      <SmartPhones />
+      <Stores />
+      <Footer />
     </Fragment>
 
   );

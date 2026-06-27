@@ -1,6 +1,6 @@
 // components/Navbar.tsx
 import Link from "next/link";
-import { ShoppingCart, Home, Briefcase, Package, Search, LogIn, Zap, Heart, User, CircleUserRound, Languages } from "lucide-react";
+import { ShoppingCart, Home, Package, Search, Zap, Heart, CircleUserRound, Languages } from "lucide-react";
 
 const Navbar = () => {
   const cartCount = 3;
@@ -9,13 +9,13 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 flex items-center gap-8 px-6 h-16
       border-b border-yellow-300 bg-yellow-300 backdrop-blur-md">
 
-      {/* Brand */}
+      
       <Link href="/"
         className="flex items-center gap-2 font-semibold text-gray-900 shrink-0 w-70">
         <Zap size={20} /> MAAKI
       </Link>
 
-      {/* Search */}
+    
       <div className="relative w-75">
         <Search size={15}
           className="absolute left-2.5 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
@@ -29,11 +29,10 @@ const Navbar = () => {
       </div>
 
       {/* Nav links */}
-      <div className="flex justify-end-safe w-100  gap-1">
+      <div className="flex justify-end-safe w-100 gap-1">
         <div className="flex items-center justify-end-safe">
           {[
             { href: "/", label: "Home", Icon: Home },
-            // { href: "/services", label: "Services", Icon: Briefcase },
             { href: "/orders", label: "Orders", Icon: Package },
             { href: "/wishlist", label: "Wishlist", Icon: Heart },
             { href: "/language", label: "Language", Icon: Languages },
@@ -51,7 +50,7 @@ const Navbar = () => {
 
 
       {/* Actions */}
-      <div className="flex items-center  shrink-0 ml-15 text-gray-700 font-semibold">
+      <div className="flex items-center shrink-0 ml-15 text-gray-700 font-semibold">
         <button
           aria-label={`Cart — ${cartCount} items`}
           className="relative flex items-center justify-center w-9 h-9 rounded-md

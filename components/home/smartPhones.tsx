@@ -2,9 +2,10 @@ import { ArrowDown, Car, ChevronLeft, ChevronRight, Heart, Plus, Star } from "lu
 import { useRef, useState } from "react";
 import { Fragment } from "react/jsx-runtime";
 import styles from "./home.module.css";
-import { useElectronics } from "@/app/hooks/useElectronics";
-export default function Electronics() {
-    const { data, isLoading, error } = useElectronics();
+import { useSmartphones } from "@/app/hooks/useElectronics";
+
+export default function SmartPhones() {
+     const { data, isLoading, error } = useSmartphones();
  
     const scrollRef = useRef<HTMLDivElement>(null);
     const [showLeft, setShowLeft] = useState(false);
@@ -27,7 +28,7 @@ export default function Electronics() {
         <Fragment>
             <div className="relative w-full py-4 px-2 mt-5 ">
                 <div className="flex justify-between px-2 my-3">
-                    <h2 className="text-2xl font-bold text-gray-800 ml-2 pl-3 mb-3 font-sans antialiased ">Electronics picks</h2>
+                    <h2 className="text-2xl font-bold text-gray-800 ml-2 pl-3 mb-3 font-sans antialiased ">Smartphones picks</h2>
                     <button className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">VIEW ALL</button>
                 </div>
                 {/* Left arrow */}

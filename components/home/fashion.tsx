@@ -9,7 +9,7 @@ export default function Fashion() {
         <Fragment>
             <div className="bg-gray-200 py-10 px-4 mx-2">
                 {types.map((type, index) => (
-                    <div className="py-4">
+                    <div key={index} className="py-4">
                         <div className="pb-5 font-bold text-2xl text-gray-700 font-serif"> 
                             {
                                 index == 0 ? "Men's Fashion" : index == 1 ? "Women's Fashion" : "Kids' Fashion"
@@ -17,8 +17,8 @@ export default function Fashion() {
                             
                             </div>
                         <div className="grid grid-cols-7 gap-4 rounded-2xl">
-                            {type.map((item) => (
-                                <div>
+                            {type.map((item, id) => (
+                                <div key={id}>
                                     <div className="h-50">
                                         {index == 0 ? <img src={`/images/fashion/men/${item}.jpg`} alt="fashion wear" className="w-full h-full rounded-4xl" /> :
                                             index == 1 ? <img src={`/images/fashion/women/${item}.jpg`} alt="fashion wear" className="w-full h-full rounded-4xl" /> :
